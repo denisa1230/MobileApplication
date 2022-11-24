@@ -10,9 +10,6 @@
             <Image Source="shop_list.png" SemanticProperties.Description="My Shopping List" HeightRequest="64" />
             <Label FontSize="22" FontAttributes="Bold" Text="My ShoppingLists" VerticalOptions="End" />
             <Label FontSize="22" Text="v1.0" VerticalOptions="End" />
-            <Image Source="checklist.png" SemanticProperties.Description="My Check List" HeightRequest="64" />
-            <Label FontSize="22" FontAttributes="Bold" Text="My CheckLists" VerticalOptions="End" />
-            <Label FontSize="22" Text="v1.0" VerticalOptions="End" />
         </HorizontalStackLayout>
         <Label Text="This app will help you to manage your shopping lists" />
 
