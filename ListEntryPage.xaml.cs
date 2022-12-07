@@ -1,13 +1,15 @@
+using Placinta_Claudiu_Lab7;
 using Todea_Denisa_Lab7.Models;
 
 namespace Todea_Denisa_Lab7;
 
 public partial class ListEntryPage : ContentPage
 {
-	public ListEntryPage()
-	{
-		InitializeComponent();
-	}
+    public ListEntryPage()
+    {
+        InitializeComponent();
+    }
+
     protected override async void OnAppearing()
     {
         base.OnAppearing();
@@ -30,4 +32,5 @@ public partial class ListEntryPage : ContentPage
             });
         }
     }
+
 }
