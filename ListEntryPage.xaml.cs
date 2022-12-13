@@ -1,4 +1,4 @@
-using Placinta_Claudiu_Lab7;
+using Todea_Denisa_Lab7;
 using Todea_Denisa_Lab7.Models;
 
 namespace Todea_Denisa_Lab7;
