@@ -1,7 +1,7 @@
 using Todea_Denisa_Lab7.Models;
 using Todea_Denisa_Lab7;
-
-namespace Placinta_Claudiu_Lab7;
+using SQLite;
+namespace  _Claudiu_Lab7;
 
 public partial class ListPage : ContentPage
 {
@@ -22,6 +22,7 @@ public partial class ListPage : ContentPage
         await App.Database.DeleteShopListAsync(slist);
         await Navigation.PopAsync();
     }
+   
 
     async void OnChooseButtonClicked(object sender, EventArgs e)
     {
@@ -31,6 +32,19 @@ public partial class ListPage : ContentPage
             BindingContext = new Product()
         });
 
+    }
+    async void OnDeleteItemButtonClicked(object sender, EventArgs e)
+    {
+        Product product;
+        var shopList = (ShopList)BindingContext;
+        if (listView.SelectedItem!=null)
+        {
+            product = listView.SelectedItem as Product;
+            var listProductAll = await App.Database.GetListProducts();
+            var listProduct = listProductAll.FindAll(x => x.ProductID == product.ID & x.ShopListID == shopList.ID);
+            await App.Database.DeleteListProductsAsync(listProduct.FirstOrDefault());
+            await Navigation.PopAsync();
+        }
     }
 
     protected override async void OnAppearing()
