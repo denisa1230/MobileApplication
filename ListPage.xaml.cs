@@ -1,7 +1,7 @@
 using Todea_Denisa_Lab7.Models;
 using Todea_Denisa_Lab7;
 using SQLite;
-namespace  _Claudiu_Lab7;
+namespace Todea_Denisa_Lab7;
 
 public partial class ListPage : ContentPage
 {
